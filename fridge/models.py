@@ -20,7 +20,7 @@ class Item(models.Model):
     etime = models.DateTimeField("time expires", null=True)
     product = models.ForeignKey('Product')
 
-    shelf = models.ForeignKey('Shelf')
+    shelf = models.ForeignKey('Shelf', null=True)
     def __unicode__(self):
         return u"Item(%s, %s)"%(self.pk, self.product.name)
 
@@ -30,6 +30,7 @@ class Product(models.Model):
     name = models.CharField(max_length=64)
     lifetime = models.IntegerField('expiry days')
     loc = models.ForeignKey('Location')
+    #shelf = models.ForeignKey('Shelf')
     def __unicode__(self):
         return u"Product(%s)"%self.name
 

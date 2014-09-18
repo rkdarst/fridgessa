@@ -7,4 +7,10 @@
   <li>{{item.product.name}}, {{item.etime|timeuntil}}</li>{% endfor%}
 </ul>
 
+Add an item:<p>
+<form method="POST">
+{% csrf_token %}
+<input type="text" id="txtSearch" name="name" maxlength="64" onkeyup="searchOpen()">
+</form>
+
 {% endblock%}

@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     # url(r'^fridgessa/', include('fridgessa.foo.urls')),
 
     url(r'^inventory/$', views.inventory),
+    url(r'^complete/item$', views.complete_item),
 )
