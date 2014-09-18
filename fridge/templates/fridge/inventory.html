@@ -1,0 +1,10 @@
+{% extends "fridge/base.html"%}
+
+{% block body%}
+
+<ul>
+{% for item in items%}
+  <li>{{item.product.name}}, {{item.etime|timeuntil}}</li>{% endfor%}
+</ul>
+
+{% endblock%}
